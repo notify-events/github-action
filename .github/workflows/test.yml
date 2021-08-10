@@ -1,0 +1,61 @@
+name: test
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Notification test
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Text only
+        uses: ./
+        with:
+          token: ${{ secrets.TOKEN }}
+          text:  ${{ github.run_id }} (1/8) Alert message
+
+      - name: Full fields
+        uses: ./
+        with:
+          token:    ${{ secrets.TOKEN }}
+          title:    Alert title
+          text:     ${{ github.run_id }} (2/8) Alert message
+          priority: highest
+          level:    success
+
+      - name: Verbose
+        uses: ./
+        with:
+          token:   ${{ secrets.TOKEN }}
+          verbose: ${{ github.run_id }} (3/8) Verbose message
+
+      - name: Info
+        uses: ./
+        with:
+          token: ${{ secrets.TOKEN }}
+          info:  ${{ github.run_id }} (4/8) Info message
+
+      - name: Notice
+        uses: ./
+        with:
+          token:  ${{ secrets.TOKEN }}
+          notice: ${{ github.run_id }} (5/8) Notice message
+
+      - name: Success
+        uses: ./
+        with:
+          token:   ${{ secrets.TOKEN }}
+          success: ${{ github.run_id }} (6/8) Success message
+
+      - name: Warning
+        uses: ./
+        with:
+          token:   ${{ secrets.TOKEN }}
+          warning: ${{ github.run_id }} (7/8) Warning message
+
+      - name: Error
+        uses: ./
+        with:
+          token: ${{ secrets.TOKEN }}
+          error: ${{ github.run_id }} (8/8) Error message

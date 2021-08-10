@@ -1,0 +1,25 @@
+{
+  "name": "github-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build -m src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notify-events/github-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/notify-events/github-action/issues"
+  },
+  "homepage": "https://github.com/notify-events/github-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.4.0",
+    "@actions/github": "^5.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}

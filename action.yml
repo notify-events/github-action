@@ -1,0 +1,68 @@
+name: Notify.Events
+author: Notify.Events
+description: Sending message to 30+ messangers
+
+inputs:
+
+  token:
+    description: |
+      Notify.Events channel token
+    required: true
+
+  title:
+    description: |
+      Message title
+    required: false
+
+  text:
+    description: |
+      Message Text (allowed simple html tags: <b>, <i>, <br>, <a href="">)
+    required: false
+
+  priority:
+    description: |
+      Message priority (highest, high, normal, low, lowest)
+    required: false
+
+  level:
+    description: |
+      Message Level (verbose, info, notice, warning, error, success)
+    required: false
+
+  verbose:
+    description: |
+      Message text with 'verbose' level and 'lowest' priority
+    required: false
+
+  info:
+    description: |
+      Message text with 'info' level and 'low' priority
+    required: false
+
+  notice:
+    description: |
+      Message text with 'notice' level and 'low' priority
+    required: false
+
+  success:
+    description: |
+      Message text with 'success' level and 'normal' priority
+    required: false
+
+  warning:
+    description: |
+      Message text with 'warning' level and 'high' priority
+    required: false
+
+  error:
+    description: |
+      Message text with 'error' level and 'highest' priority
+    required: false
+
+runs:
+  using: node12
+  main: dist/index.js
+
+branding:
+  icon: message-circle
+  color: red

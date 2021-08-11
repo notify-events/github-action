@@ -1,9 +1,17 @@
 # Notify.Events for GitHub Action
 
-[GitHub Action](https://github.com/features/actions) for sending a notification message for [30+ messengers and other services](https://notify.events#sRecipients).
+The integration allows sending alerts and notifications from [GitHub Action](https://github.com/features/actions) via [40+ messengers and other communication tools](https://notify.events/#sRecipients).
+
+Receive instant messages via Slack, Signal, MS Teams, Discord, SMS, voice calls and more. Apply simple text formatting, level and priority to alerts to filter messages or distribute them among different team members / chatting apps.
+
+See the full list of supported messengers [here](https://notify.events/features).
 
 [![Actions Status](https://github.com/notify-events/github-action/workflows/test/badge.svg)](https://github.com/notify-events/github-action/actions)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/notify-events/github-action/blob/master/LICENSEs)
+
+#### Read the manual in other languages
+
+* [Русский](docs/ru-RU/README.md)
 
 ## Usage
 
